@@ -17,15 +17,17 @@ const Slider = (props) => {
 
   return (
     <Fragment>
-      <div className="relative mt-16 bg-gray-100 border-2">
+      <div className="relative mt-16 bg-gray-100 border-2 flex">
         {data.sliderImages.length > 0 ? (
+          <div>
           <img
-            className="w-full"
+            className="w-100 h-250"
             src={`${apiURL}/uploads/customize/${data.sliderImages[slide].slideImage}`}
             alt="sliderImage"
           />
+          </div>
         ) : (
-          ""
+          console.log("No Images in Slider")
         )}
 
         {data?.sliderImages?.length > 0 ? (
